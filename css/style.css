@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(22,76,100);
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    border: 1px solid white;
+    margin: 2rem auto; /*1rem = 16px*/
+}
+
+.container>div{ /*changes for all div's in container*/
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 50%; /*squer -> circle*/
+    margin: 0 auto; /*to center elements*/
+}
+#red {
+    background-color: red;
+
+    position: relative; /*to place element where I want*/
+    top: -300px;
+    animation: red 3s ease-in-out forwards; /*forwards - to let it stay*/
+    animation-iteration-count: infinite;    /*to be repeatable*/
+}
+
+@keyframes red {
+    100% {top: 0;}
+}
+
+#yellow{
+    background-color: yellow;
+
+    opacity: 0;
+    animation: yellow 5s ease-in-out forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes yellow {
+    100% {opacity: 1;}
+}
+
+#green{
+    background-color: green;
+
+    transform: rotateX(180deg);
+    animation: green 3s ease-in-out forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes green {
+    50%{transform: rotate(180deg);}
+}
